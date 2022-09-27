@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "1678c64d-c26b-4c7a-81b5-5b54cda61023",
+		"name": "book-store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restapi/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restapi",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restapi/books/53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restapi",
+						"books",
+						"53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Libro Nuevo\",\r\n    \"isbn\": \"12xxxxxxxxy\",\r\n    \"language\": \"Portugues\",\r\n    \"pages\": 100,\r\n    \"price\": 50.0,\r\n    \"publisher\": \"UFG\",\r\n    \"title\": \"Libro en Portugues\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restapi/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restapi",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"description\": \"Libro Nuevo en Portugues\",\r\n        \"isbn\": \"1213BACFGHJK\",\r\n        \"language\": \"Portugues\",\r\n        \"pages\": 101,\r\n        \"price\": 50.0,\r\n        \"publisher\": \"UFG\",\r\n        \"title\": \"Libro en Portugues Nuevo\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/restapi/books/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restapi",
+						"books",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/restapi/books/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restapi",
+						"books",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
