@@ -18,7 +18,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "baseHref" : "/my-store/",
-            "deployUrl": "/my-store/",
             "aot": true,
             "preserveSymlinks": true,
             "outputPath": "dist",
